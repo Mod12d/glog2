@@ -13,3 +13,6 @@ Blog template to use GitHub Issues as article editor.
 
 1. Create an issue.
 2. Wait a few minutes and your blog will be updated.
+
+
+https://Mod12d.github.io/glog2/
