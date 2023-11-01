@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { type ReactNode } from "react";
 
-const siteTitle = "T";
+const siteTitle = "Tips";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <header className="container mx-auto max-w-2xl px-8 py-12">
         <nav>
           <p>
-            <Link href="/" legacyBehavior>
+            <Link href="/">
               <a className="font-bold text-gray-900 visited:text-gray-900 dark:text-gray-300 dark:visited:text-gray-300">
                 {siteTitle}
               </a>
@@ -28,7 +28,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <nav>
           <ul className="flex flex-row gap-6 justify-center">
             <li>
-              <Link href="/" legacyBehavior>
+              <Link href="/">
                 <a className="text-gray-900 visited:text-gray-900 dark:text-gray-300 dark:visited:text-gray-300">
                   Home
                 </a>
