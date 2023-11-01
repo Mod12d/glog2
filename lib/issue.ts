@@ -88,5 +88,13 @@ async function renderMarkdown(content: string) {
     .use(rehypeStringify)
     .use(remarkGfm)
     .process(content);
-  return result.toString();
+
+    const html = result.toString();
+
+    // Replace Markdown syntax for MP4 videos with HTML video tags
+    const mp4VideoRegex = /!\[.*]\(([^)]+\.mp4)\)/g;
+    const mp4VideoReplacement = '<video controls><source src="$1" type="video/mp4"></video>';
+    const htmlWithVideos = html.replace(mp4VideoRegex, mp4VideoReplacement);
+
+    return htmlWithVideos;
 }
